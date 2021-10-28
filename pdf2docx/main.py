@@ -3,8 +3,6 @@
 
 import logging
 from .converter import Converter
-from .gui.App import App
-
 
 class PDF2DOCX:
     '''Command line interface for ``pdf2docx``.'''
@@ -98,6 +96,8 @@ class PDF2DOCX:
     @staticmethod
     def gui():
         '''Simple user interface.'''
+        from .gui.App import App
+
         app = App(title='PDF_2_Docx Converter', width=500, height=600)
         app.mainloop()
 
